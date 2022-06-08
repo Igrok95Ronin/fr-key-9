@@ -24,29 +24,52 @@ $title = $text . ' ' . $city;
     
     
         <!--Шапка сайта-->
-        <header>
-            <div class="container">
+        <header class="header">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col">...</div>                 
+                    <div class="col-12 header-container">
+                        <div class="header-box">
+                            <div class="logo">
+                                <img class="logo__image" src="assets/img/logo.png" alt="" >
+                            </div>
+                            <div class="logo-efficiency">
+                                <img class="logo-efficiency__img logo-efficiency__img--mx" src="assets/img/icone-local.png" alt="" >
+                                <div class="logo-efficiency__all-text">
+                                    <p class="logo-efficiency__text">Votre serrurier intervient à Paris</p>
+                                    <p class="logo-efficiency__text-yellow">En moins de 30 minutes </p>
+                                </div>
+                            </div>
+                            <div class="logo__hr logo__hr--mr"></div>
+                            <div class="logo-contacts">
+                                <img class="logo-contacts__image logo-contacts__image--mx" src="assets/img/icone-tel.png" alt="" >
+                                <div class="logo-contacts__tell-text">
+                                    <p class="logo-contacts__schedule">24h/24 - 7j/7</p>
+                                    <a class="logo-contacts__number" href="#" >111222333</a>
+                                    <p class="logo-contacts__small-text">Appel gratuit non surtaxé</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                 
                 </div>            
             </div>
-            <!-- Навигационные ссылки -->
-            <nav>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">...</div>                 
-                    </div>            
-                </div>
-            </nav>
         </header>
-
-        <!-- Основное содержимое страницы -->
-        <main>
             <!-- Раздел страницы-->
-            <section>
-                <div class="container">
+            <section class="first-section">
+                <div class="container-fluid">
                     <div class="row">
-                        <div class="col">...</div>                 
+                        <div class="col-12 first-section-container">
+                            <div class="description">
+                                <h1 class="desctiption__title">BENOIT, NOTRE ARTISAN SERRURIER INTERVIENT À PARIS</h1>
+                                <div class="description__imges">
+                                    <img class="description__img" src="assets/img/panneau-paris-0.png" alt="" >
+                                </div>
+                                <p class="description__text mt-3">Devis et déplacement gratuit</p>
+                                <div class="description__number d-grid col-4 m-auto mb-2">
+                                    <a href="" class="description__link btn text-end pe-4">111222333</a>
+                                </div>
+                                <p class="description__mini-text">APPEL GRATUIT NON SURTAXÉ</p>
+                            </div>
+                        </div>                 
                     </div>            
                 </div>
                 <!-- Определяет статью -->
@@ -58,7 +81,6 @@ $title = $text . ' ' . $city;
                     </div>
                 </article>
             </section>
-        </main>
 
         <!--Нижний колонтитул страницы-->
         <footer>

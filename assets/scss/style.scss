@@ -1,3 +1,12 @@
+$primary: #d41527;
+
+@mixin logo-efficiency__all-text {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
 body{
     outline: 1px solid red;
     margin: auto;
@@ -6,4 +15,153 @@ body{
     max-width: 1920px;
     min-width: 360px;
     color: #7a7a7a;
+}
+a {
+    text-decoration: none;
+    transition: 0.5s;
+    &:hover {
+        color: #ebdc05;
+        letter-spacing: 1px;
+        transition: 0.5s
+    }
+}
+// Header
+.header {
+    background-color: $primary;
+}
+.header-container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.logo {
+    flex-grow: 1;
+}
+.logo__image {
+    max-width: 250px;
+}
+.logo-efficiency {
+    display: flex;
+    align-items: center;
+    flex-basis: 45%;
+    justify-content: end;
+    padding: 0 10px 0 5px;
+}
+.logo-efficiency__img {
+    max-width: 50px;
+}
+.logo-efficiency__img--mx {
+    margin: 0 10px 0;
+}
+.logo-efficiency__all-text {
+    @include logo-efficiency__all-text;
+    font-size: clamp(17px,calc(2vw - 3px),20px);
+}
+.logo-efficiency__text {
+    margin: 0;
+}
+.logo-efficiency__text-yellow {
+    color: #ffec00;
+    margin: 0;
+}
+.logo__hr {
+    color: #fff;
+    height: 75px;
+    width: 1px;
+    background-color: rgba(0,0,0,0.25);
+}
+.logo__hr--mr {
+    margin: 0 10px;
+}
+.logo-contacts {
+    display: flex;
+    align-items: center;
+    flex-basis: 20%;
+}
+.logo-contacts__image {
+    max-width: 50px;
+}
+.logo-contacts__image--mx {
+    margin: 0 10px 0;
+}
+.logo-contacts__tell-text {
+    @include logo-efficiency__all-text;
+}
+.logo-contacts__schedule {
+    margin: 0;
+}
+.logo-contacts__number {
+    color: #ffec00;
+}
+.logo-contacts__small-text {
+    margin: 0;
+    font-size: clamp(7px,calc(1vw - 2px),11px);
+}
+// Furst section
+.first-section {
+    background: url(../img/chrome_L6xFOnSxr6.png) no-repeat;
+    background-size: cover;
+}
+.first-section-container {
+    max-width: 1500px;
+    min-height: 60vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.description {
+    max-width: 730px;
+    text-align: center;
+    padding: 0 10px;
+}
+.desctiption__title {
+    font-size: 40px;
+    line-height: 46px;
+    color: #fff;
+}
+.description__imges {
+}
+.description__img {
+    max-width: 175px;
+}
+.description__text {
+    color: #ffec00;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+.description__number {
+    width: 225px;
+}
+.description__link {
+    color: #c80000;
+    font-size: 26px;
+    font-weight: 600;
+    background-color: #ffec00;
+    padding:5px 0 5px 0 ;
+    position: relative;
+    &:hover {
+        letter-spacing: 0;
+    }
+    &::before {
+        content: '';
+        background-image: url(../img/phone-icon.png);
+        background-size: cover;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 9px;
+        left: 20px;
+        border-radius: 50%;
+    }
+}
+.description__mini-text {
+    font-size: 11px;
+    color: #fff;
 }
