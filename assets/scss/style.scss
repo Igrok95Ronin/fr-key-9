@@ -7,6 +7,43 @@ $primary: #d41527;
     color: #fff;
     margin: 0;
 }
+@mixin button {
+    color: #c80000;
+    font-size: 26px;
+    font-weight: 600;
+    background-color: #ffec00;
+    padding:5px 0 5px 0 ;
+    position: relative;
+    &:hover {
+        letter-spacing: 0;
+    }
+    &::before {
+        content: '';
+        background-image: url(../img/phone-icon.png);
+        background-size: cover;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 9px;
+        left: 20px;
+        border-radius: 50%;
+    }
+}
+@mixin right-block-one {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    min-height: 125px;
+    padding-top: 30px;
+    color: #fff;
+}
+@mixin right-block-one__text {
+    padding-right: 50px;
+    text-align: left;
+    font-size: 20px;
+}
 body{
     outline: 1px solid red;
     margin: auto;
@@ -106,6 +143,7 @@ a {
 .first-section {
     background: url(../img/chrome_L6xFOnSxr6.png) no-repeat;
     background-size: cover;
+    background-position: 15%;
 }
 .first-section-container {
     max-width: 1500px;
@@ -121,11 +159,9 @@ a {
     padding: 0 10px;
 }
 .desctiption__title {
-    font-size: 40px;
-    line-height: 46px;
+    font-size: clamp(23px,5vw,40px);
+    line-height: clamp(35px,5vw,46px);
     color: #fff;
-}
-.description__imges {
 }
 .description__img {
     max-width: 175px;
@@ -140,28 +176,140 @@ a {
     width: 225px;
 }
 .description__link {
-    color: #c80000;
-    font-size: 26px;
-    font-weight: 600;
-    background-color: #ffec00;
-    padding:5px 0 5px 0 ;
-    position: relative;
-    &:hover {
-        letter-spacing: 0;
-    }
-    &::before {
-        content: '';
-        background-image: url(../img/phone-icon.png);
-        background-size: cover;
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        top: 9px;
-        left: 20px;
-        border-radius: 50%;
-    }
+    @include button();
 }
 .description__mini-text {
     font-size: 11px;
     color: #fff;
+}
+//Second section
+.second-section {
+    background-color: #edf2f0;
+}
+.second-section-container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.second-section__title {
+    font-size: clamp(28px,3vw,32px);
+    text-align: center;
+    font-weight: bold;
+}
+.second-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+.left-block {
+    background-color: #fff;
+    flex-basis: calc(70% - 35px);
+}
+.left-block__img {
+    width: 100%;
+}
+.left-block__subtitle {
+    font-size: clamp(25px,3vw,38px);
+    line-height: 42px;
+    font-weight: 600;
+    color: #d41527;
+    padding:0 50px;
+}
+.left-block__paragraph {
+    font-size: clamp(18px,2vw,21px);
+    line-height: 28px;
+    margin-bottom: 8px;
+    padding: 0 50px;
+}
+.left-block__paragraph-4-strong {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 50px;
+}
+.left-block__number {
+    width: 225px;
+}
+.left-block__link {
+    @include button();
+}
+.left-block__small-text {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+.right-block {
+   flex-basis: 30%;
+}
+.right-block-one {
+    @include right-block-one();
+    &:nth-child(1){
+        background: #d41527 url(../img/picto-proche.png) center right no-repeat;
+        &:hover {
+            background: #d41527 url(../img/picto-proche-hover.png) center right no-repeat;
+            opacity: 0.75;
+            cursor: pointer;
+        }
+    }
+    &:nth-child(2){
+        background: #d41527 url(../img/picto-rapide.png) center right no-repeat;
+        &:hover {
+            background: #d41527 url(../img/picto-rapide-hover.png) center right no-repeat;
+            opacity: 0.75;
+            cursor: pointer;
+        }
+    }
+    &:nth-child(3){
+        background: #d41527 url(../img/picto-devis.png) center right no-repeat;
+        &:hover {
+            background: #d41527 url(../img/picto-devis-hover.png) center right no-repeat;
+            opacity: 0.75;
+            cursor: pointer;
+        }
+    }
+    &:nth-child(4){
+        background: #d41527 url(../img/picto-experience.png) center right no-repeat;
+        &:hover {
+            background: #d41527 url(../img/picto-experience-hover.png) center right no-repeat;
+            opacity: 0.75;
+            cursor: pointer;
+        }
+    }
+}
+.right-block-one__text {
+    @include right-block-one__text();
+}
+
+
+
+
+
+@media (max-width: 991px) {
+    .description {
+        max-width: 100%;
+    }
+    .first-section-container {
+        justify-content: center;
+        min-height: 45vh;
+        padding: 30px 0 0;
+    }
+    .second-box {
+        display: block;
+    }
+}
+@media (max-width: 768px) {
+    .left-block__subtitle {
+        padding: 0 10px;
+        text-align: center;
+    }
+    .left-block__paragraph {
+        padding: 0 10px;
+    }
+    .left-block__paragraph-4-strong {
+        padding: 0 10px;
+    }
 }
