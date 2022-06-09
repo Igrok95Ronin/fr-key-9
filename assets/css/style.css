@@ -6,6 +6,7 @@ body {
   max-width: 1920px;
   min-width: 360px;
   color: #7a7a7a;
+  background-color: #edf2f0;
 }
 
 a {
@@ -370,6 +371,85 @@ a:hover {
   font-size: 20px;
 }
 
+.third-section {
+  background-color: #fff;
+}
+
+.third-section-container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.third-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.third-left-block {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.left-block__title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.list__ul {
+  list-style: none;
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+}
+
+.list__li {
+  margin: 15px 0;
+  font-size: 16px;
+  padding-right: 10px;
+  font-weight: normal;
+  line-height: 18px;
+  padding-left: 22px;
+  background: url(../img/puce.png) 0px 2px no-repeat;
+}
+
+.third-right-block {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.right-block__title {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.right-block--mb {
+  margin-bottom: 35px;
+}
+
+.right-block__text {
+  font-size: 16px;
+  color: #404040;
+}
+
+.right-block__img {
+  max-width: 100%;
+}
+
 @media (max-width: 991px) {
   .description {
     max-width: 100%;
@@ -383,8 +463,45 @@ a:hover {
     padding: 30px 0 0;
   }
 
-  .second-box {
-    display: block;
+  .left-block {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .right-block {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+
+  .third-left-block {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .third-right-block {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .right-block__text {
+    text-align: center;
+  }
+
+  .right-block__images {
+    text-align: center;
+  }
+
+  .right-block--mb {
+    margin-top: 35px;
   }
 }
 @media (max-width: 768px) {
@@ -399,5 +516,10 @@ a:hover {
 
   .left-block__paragraph-4-strong {
     padding: 0 10px;
+  }
+
+  .list__ul {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
