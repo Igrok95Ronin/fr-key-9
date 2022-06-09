@@ -11,7 +11,7 @@ $title = $text . ' ' . $city;
 ?>
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,8 +21,6 @@ $title = $text . ' ' . $city;
     <title><?= $title ?></title>
 </head>
 <body>
-    
-    
         <!--Шапка сайта-->
         <header class="header d-none d-lg-block">
             <div class="container-fluid">
@@ -35,7 +33,7 @@ $title = $text . ' ' . $city;
                             <div class="logo-efficiency">
                                 <img class="logo-efficiency__img logo-efficiency__img--mx" src="assets/img/icone-local.png" alt="" >
                                 <div class="logo-efficiency__all-text">
-                                    <p class="logo-efficiency__text">Votre serrurier intervient à Paris</p>
+                                    <p class="logo-efficiency__text">Votre serrurier intervient</p>
                                     <p class="logo-efficiency__text-yellow">En moins de 30 minutes </p>
                                 </div>
                             </div>
@@ -59,7 +57,7 @@ $title = $text . ' ' . $city;
                     <div class="row">
                         <div class="col-12 first-section-container">
                             <div class="description">
-                                <h1 class="desctiption__title">BENOIT, NOTRE ARTISAN SERRURIER INTERVIENT À PARIS</h1>
+                                <h1 class="desctiption__title">BENOIT, NOTRE ARTISAN SERRURIER INTERVIENT</h1>
                                 <div class="description__imges">
                                     <img class="description__img" src="assets/img/panneau-paris-0.png" alt="" >
                                 </div>
@@ -85,7 +83,7 @@ $title = $text . ' ' . $city;
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12 second-section-container">
-                            <h2 class="second-section__title mt-5 mb-4">Votre serrurier professionnel à Paris</h2>
+                            <h2 class="second-section__title mt-5 mb-4">Votre serrurier professionnel</h2>
                             <div class="second-box">
                                 <div class="left-block pb-4">
                                     <div class="left-block__images">
@@ -206,7 +204,7 @@ $title = $text . ' ' . $city;
                         <div class="col-12 fifth-section-container">
                             <div class="contacts">
                                 <p class="contacts__first-text">Si vous avez une urgence de serrurerie, appelez simplement notre standard disponible 24h/24</p>
-                                <p class="contacts__second-text">DEVIS GRATUIT ET SANS ENGAGEMENT POUR UNE <span>INTERVENTION RAPIDE À PARIS</span></p>
+                                <p class="contacts__second-text">DEVIS GRATUIT ET SANS ENGAGEMENT POUR UNE <span>INTERVENTION RAPIDE</span></p>
                                 <div class="left-block__number d-grid col-4 m-auto mt-4 mb-2">
                                     <a href="" class="left-block__link btn text-end pe-4">111222333</a>
                                 </div>
@@ -217,10 +215,54 @@ $title = $text . ' ' . $city;
                 </div>
             </section>
         <!--Нижний колонтитул страницы-->
-        <footer>
-            <div class="container">
+        <footer class="footer">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col">.sad..</div>                 
+                    <div class="col-12 footer-container">
+                        <div class="footer-box">
+                            <div class="footer-left-block">
+                                <p class="footer-left-block__text">De bonnes raisons de choisir nos services pour une intervention :</p>
+                                <ul class="footer-left-block__ul">
+                                    <li class="footer-left-block__li">RAPIDITÉ D'EXÉCUTION</li>
+                                    <li class="footer-left-block__li">PRESTATIONS DE QUALITÉ</li>
+                                    <li class="footer-left-block__li">DEVIS GRATUIT</li>
+                                    <li class="footer-left-block__li">MATÉRIEL DE GRANDE MARQUE</li>
+                                </ul>
+                                <div class="left-block__number d-grid col-4 mt-4 mb-2">
+                                    <a class="left-block__link btn text-end pe-4" href="" >111222333</a>
+                                </div>
+                                <p class="footer-left-block__small-text">APPEL GRATUIT NON SURTAXÉ</p>
+                            </div>
+                            <div class="footer-right-block">
+                                <form id="jq_form" class="text-center mt-4">
+                                    <h6 class="text-center colorh6">PRISE DE RENDEZ-VOUS<h6>
+                                    <div class="my-3 px-3 ">
+                                        <input class="form-control" placeholder="Nom" name="jq_name" type="text">
+                                        <div id="jq_name" style="font-size:15px;color:red;padding-top:2px;display:none">Ceci est un champ obligatoire.</div>
+                                    </div>
+                                    <div class="my-3 px-3">
+                                        <input class="form-control" placeholder="Téléphone" name="jq_phone" type="text">
+                                        <div id="jq_phone" style="font-size:15px;color:red;padding-top:2px;display:none">Ceci est un champ obligatoire.</div>
+                                    </div>
+                                    <div class="my-3 px-3">
+                                        <input class="form-control" placeholder="Rue" name="jq_street" type="text">
+                                    </div>
+                                    <div class="my-3 px-3">
+                                        <input class="form-control" placeholder="PLZ / Ort" name="jq_city" type="text">
+                                    </div>
+                                    <div class="my-3 px-3">
+                                        <input class="form-control" placeholder="E-Mail" name="jq_email" type="text"> 
+                                    </div>
+                                    <div class="my-3 px-3">
+                                        <textarea rows="3" class="form-control" name="jq_text" placeholder="Décrivez votre problème..."></textarea>
+                                        <div id="jq_text" style="font-size:15px;color:red;padding-top:2px;display:none">Ceci est un champ obligatoire.</div>
+                                    </div>
+                                    <input class="btn left-block__link col-12 width--button" type="submit" id="jq_submit" value="Suivant"> 
+                                    <div id="jq_success" style="display:none">Merci pour votre message. Elle a été envoyée.</div>
+                                </form> 
+                            </div>
+                        </div>
+                    </div>                 
                 </div>            
             </div>
             <!-- Навигационные ссылки -->
