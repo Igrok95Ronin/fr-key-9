@@ -4,8 +4,8 @@ $site_data      = json_decode(file_get_contents('http://templates.jquery.link/ap
 $phone_name     = $site_data['phone_name'];
 $phone_href     = $site_data['phone_href'];
 
-$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Entrumpelung'));
-$city           = str_replace('+', ' ', trim($_GET['n'] ?? 'in der nahe'));
+$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'BENOIT, NOTRE ARTISAN SERRURIER INTERVIENT'));
+$city           = str_replace('+', ' ', trim($_GET['n'] ?? ''));
 
 $title = $text . ' ' . $city;
 ?>
@@ -42,7 +42,7 @@ $title = $text . ' ' . $city;
                                 <img class="logo-contacts__image logo-contacts__image--mx" src="assets/img/icone-tel.png" alt="" >
                                 <div class="logo-contacts__tell-text">
                                     <p class="logo-contacts__schedule">24h/24 - 7j/7</p>
-                                    <a class="logo-contacts__number" href="#" >111222333</a>
+                                    <a class="logo-contacts__number" href="<?= $phone_href ?>" ><?= $phone_name ?></a>
                                     <p class="logo-contacts__small-text">Appel gratuit non surtaxé</p>
                                 </div>
                             </div>
@@ -57,13 +57,13 @@ $title = $text . ' ' . $city;
                     <div class="row">
                         <div class="col-12 first-section-container">
                             <div class="description">
-                                <h1 class="desctiption__title">BENOIT, NOTRE ARTISAN SERRURIER INTERVIENT</h1>
-                                <div class="description__imges">
+                                <h1 class="desctiption__title"><?= $title ?></h1>
+                        <!--         <div class="description__imges">
                                     <img class="description__img" src="assets/img/panneau-paris-0.png" alt="" >
-                                </div>
+                                </div> -->
                                 <p class="description__text mt-3">Devis et déplacement gratuit</p>
                                 <div class="description__number d-grid col-4 m-auto mb-2">
-                                    <a href="" class="description__link btn text-end pe-4">111222333</a>
+                                    <a class="description__link btn text-end pe-4" href="<?= $phone_href ?>" ><?= $phone_name ?></a>
                                 </div>
                                 <p class="description__mini-text">APPEL GRATUIT NON SURTAXÉ</p>
                             </div>
@@ -95,7 +95,7 @@ $title = $text . ' ' . $city;
                                     <p class="left-block__paragraph">Votre satisfaction est au coeur de nos préoccupations. En cas d'urgence nous pouvons vous proposer un dépannage de qualité dans des délais très courts.</p>
                                     <p class="left-block__paragraph-4-strong">Pour connaitre tous nos tarifs, merci de nous contacter par téléphone</p>
                                     <div class="left-block__number d-grid col-4 m-auto mt-4 mb-2">
-                                        <a href="" class="left-block__link btn text-end pe-4">111222333</a>
+                                        <a class="left-block__link btn text-end pe-4" href="<?= $phone_href ?>" ><?= $phone_name ?></a>
                                     </div>
                                     <p class="left-block__small-text">Appel gratuit non surtaxé</p>
                                 </div>
@@ -206,7 +206,7 @@ $title = $text . ' ' . $city;
                                 <p class="contacts__first-text">Si vous avez une urgence de serrurerie, appelez simplement notre standard disponible 24h/24</p>
                                 <p class="contacts__second-text">DEVIS GRATUIT ET SANS ENGAGEMENT POUR UNE <span>INTERVENTION RAPIDE</span></p>
                                 <div class="left-block__number d-grid col-4 m-auto mt-4 mb-2">
-                                    <a href="" class="left-block__link btn text-end pe-4">111222333</a>
+                                    <a class="left-block__link btn text-end pe-4" href="<?= $phone_href ?>" ><?= $phone_name ?></a>
                                 </div>
                                 <p class="contacts__small-text">APPEL GRATUIT NON SURTAXÉ</p>
                             </div>
@@ -229,7 +229,7 @@ $title = $text . ' ' . $city;
                                     <li class="footer-left-block__li">MATÉRIEL DE GRANDE MARQUE</li>
                                 </ul>
                                 <div class="left-block__number d-grid col-4 mt-4 mb-2">
-                                    <a class="left-block__link btn text-end pe-4" href="" >111222333</a>
+                                    <a class="left-block__link btn text-end pe-4" href="<?= $phone_href ?>" ><?= $phone_name ?></a>
                                 </div>
                                 <p class="footer-left-block__small-text">APPEL GRATUIT NON SURTAXÉ</p>
                             </div>
@@ -265,14 +265,6 @@ $title = $text . ' ' . $city;
                     </div>                 
                 </div>            
             </div>
-            <!-- Навигационные ссылки -->
-            <nav>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">.asd..</div>                 
-                    </div>            
-                </div>
-            </nav>
         </footer>
         <!--Style-->     
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
